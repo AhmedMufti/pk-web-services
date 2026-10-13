@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Nellis Family Dentistry | Tulsa, OK</title>
+<meta name="description" content="Nellis Family Dentistry in Tulsa, OK. Dr. Nicole A. Nellis. General, cosmetic and restorative dentistry for the whole family. Call (918) 518-6305.">
+<meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16111b" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&text=0123456789&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#5b2a86; --plum-ink:#3f1b60; --plum-soft:#efe7f6; --plum-line:#d9c9e8;
+  --bg:#fbf8f3; --surface:#ffffff; --ink:#24192e; --muted:#5e5367; --line:#e7dfd6;
+  --field-line:#8a7f93;
+  --warm:#f4e3cf; --warm-ink:#7a4a17;
+  --btn-ink:#ffffff; --focus:#c06a1b;
+  --radius:18px; --shadow:0 1px 2px rgba(40,20,60,.06),0 8px 24px rgba(40,20,60,.06);
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --plum:#c9a6ec; --plum-ink:#e6d4f8; --plum-soft:#2a1f36; --plum-line:#433256;
+    --bg:#16111b; --surface:#1f1826; --ink:#f3edf7; --muted:#b9aec3; --line:#352b3e;
+    --field-line:#7d6f8a;
+    --warm:#3a2a1c; --warm-ink:#f0c99c;
+    --btn-ink:#1c1024; --focus:#f0b46b;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media (min-width:860px){body{padding-bottom:0}}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0}
+a{color:var(--plum)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,iframe:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:0;background:var(--surface);padding:10px 14px;z-index:99}
+.skip:focus{left:8px;top:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg{flex:none}
+
+/* preview note: fixed colours in both themes */
+.note{background:#24192e;color:#fbf8f3;font-size:.875rem;line-height:1.4}
+.note .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;padding-top:6px;padding-bottom:6px}
+.note button{background:none;border:1px solid currentColor;color:inherit;border-radius:999px;font:inherit;font-size:.8125rem;min-height:44px;min-width:44px;padding:0 16px;cursor:pointer;flex:none}
+.note button:focus-visible{outline-color:#f0b46b}
+.note[hidden]{display:none}
+
+/* header */
+header.top{border-bottom:1px solid var(--line);background:var(--bg)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:16px}
+.mark{text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px;min-height:48px}
+.mark-dot{width:34px;height:34px;border-radius:50%;background:var(--plum);color:var(--bg);display:grid;place-items:center;font:600 1.1rem/1 var(--serif)}
+.mark b{font:600 1.15rem/1.1 var(--serif);display:block}
+.mark small{display:block;font-size:.75rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+nav.main{display:none;gap:26px;align-items:center}
+nav.main a{color:var(--ink);text-decoration:none;font-size:.95rem}
+nav.main a:hover{color:var(--plum)}
+nav.main a.btn-solid,nav.main a.btn-solid:hover{color:var(--btn-ink)}
+.head-call{display:none}
+@media (min-width:860px){nav.main{display:flex}.head-call{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:14px;font:700 1.0625rem/1.2 var(--sans);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s,background .15s}
+.btn:active{transform:translateY(1px)}
+.btn-solid{background:var(--plum);color:var(--btn-ink)}
+.btn-solid:hover{background:var(--plum-ink)}
+@media (prefers-color-scheme:dark){.btn-solid:hover{background:#dcc2f4}}
+.btn-line{background:var(--surface);color:var(--plum);border-color:var(--plum)}
+.btn-line:hover{background:var(--plum-soft)}
+.btn-sm{min-height:44px;padding:0 16px;font-size:.95rem;border-radius:12px}
+
+/* hero */
+.hero{padding:28px 0 36px}
+.hero .wrap{display:grid;gap:28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8125rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--plum)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+.hero h1{font-size:clamp(2.2rem,9vw,4.1rem);margin:12px 0 10px;color:var(--ink)}
+.tagline{font:500 italic clamp(1.3rem,4.6vw,1.9rem)/1.25 var(--serif);color:var(--plum);margin-bottom:16px}
+.lede{font-size:1.125rem;color:var(--muted);max-width:36ch;text-wrap:pretty}
+.cta{display:grid;gap:12px;margin-top:22px}
+.cta .btn{width:100%;min-height:60px;font-size:1.125rem}
+.cta-sub{font-size:.9rem;color:var(--muted);margin-top:12px}
+@media (min-width:600px){.cta{grid-template-columns:auto auto;justify-content:start}.cta .btn{width:auto;padding:0 28px}}
+
+.card-hours{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+.card-hours h2{font-size:1.25rem;margin-bottom:12px}
+.hours{width:100%;border-collapse:collapse;font-size:1rem}
+.hours th{text-align:left;font-weight:400;color:var(--muted);padding:8px 0}
+.hours td{text-align:right;padding:8px 0;font-weight:700}
+.hours tr+tr{border-top:1px dashed var(--line)}
+.hours .other td{font-weight:400;color:var(--muted)}
+.hours tr.today th,.hours tr.today td{color:var(--plum);font-weight:700}
+.hours tr.today th{padding-left:10px;box-shadow:inset 3px 0 0 var(--plum)}
+.pill{display:inline-block;margin-left:8px;font-size:.72rem;font-weight:700;letter-spacing:.04em;line-height:1;padding:4px 8px;border-radius:999px;background:var(--plum-soft);color:var(--plum);vertical-align:2px}
+.addr{display:flex;gap:12px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:.98rem}
+.addr svg{color:var(--plum);margin-top:3px}
+@media (min-width:860px){
+  .hero{padding:72px 0 80px}
+  .hero .wrap{grid-template-columns:1.35fr 1fr;align-items:center;gap:56px}
+  .lede{font-size:1.25rem}
+}
+
+/* sections */
+section.block{padding:56px 0;border-top:1px solid var(--line)}
+.sec-head{max-width:640px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(1.75rem,5vw,2.5rem);margin:10px 0 10px}
+.sec-head p{color:var(--muted);text-wrap:pretty}
+@media (min-width:860px){section.block{padding:88px 0}}
+
+.services{display:grid;gap:16px;grid-auto-rows:1fr}
+@media (min-width:640px){.services{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.services{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:639px){.services{grid-auto-rows:auto}}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column}
+.svc .ic{width:48px;height:48px;border-radius:14px;background:var(--plum-soft);color:var(--plum);display:grid;place-items:center;margin-bottom:14px}
+.svc h3{font-size:1.3rem;margin-bottom:4px}
+.svc .for{font-size:.92rem;color:var(--muted);margin-bottom:14px;text-wrap:pretty}
+.svc ul{list-style:none;margin:0;padding:14px 0 0;border-top:1px solid var(--line);display:grid;gap:4px;font-size:.95rem}
+.svc li{padding-left:14px;position:relative}
+.svc li::before{content:"";position:absolute;left:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--plum)}
+
+/* doctor */
+.doc{display:grid;gap:28px}
+@media (min-width:860px){.doc{grid-template-columns:1fr 1.25fr;gap:56px;align-items:start}}
+.doc-intro .sec-head{margin-bottom:16px}
+.doc-name{font:600 1.35rem/1.25 var(--serif)}
+.doc-role{color:var(--muted);margin-top:4px}
+.creds{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;display:grid;gap:22px}
+@media (min-width:600px){.creds{grid-template-columns:1fr 1fr;padding:28px;gap:28px}}
+.creds h3{font:700 .8125rem/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--plum);margin-bottom:12px}
+.creds ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.creds li{padding-left:14px;border-left:2px solid var(--plum-line);line-height:1.4}
+
+/* visit + form */
+.visit{display:grid;gap:20px}
+@media (min-width:860px){.visit{grid-template-columns:1fr 1.25fr;gap:32px;align-items:start}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.panel h3{font-size:1.3rem;margin-bottom:8px}
+.panel p.small{font-size:.95rem;color:var(--muted)}
+.steps{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;counter-increment:s}
+.steps li::before{content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--warm);color:var(--warm-ink);display:grid;place-items:center;font-weight:700}
+.steps b{display:block}
+.steps span{font-size:.95rem;color:var(--muted)}
+.ph{display:flex;flex-direction:column;gap:8px;margin-top:18px}
+
+form{display:grid;gap:16px;margin-top:16px}
+label{display:block;font-weight:700;font-size:.95rem;margin-bottom:6px}
+label .opt{font-weight:400;color:var(--muted)}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--field-line);border-radius:12px;padding:12px 14px;min-height:50px}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--plum)}
+[aria-invalid=true]{border-color:#b3261e;border-width:2px}
+@media (prefers-color-scheme:dark){[aria-invalid=true]{border-color:#ffb4ab}}
+.row2{display:grid;gap:16px}
+@media (min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+.form-foot{font-size:.875rem;color:var(--muted)}
+.err{color:#b3261e;font-size:.9rem}
+.err:empty{display:none}
+@media (prefers-color-scheme:dark){.err{color:#ffb4ab}}
+.sent{font-size:.95rem;padding:12px 14px;border-radius:12px;background:var(--plum-soft);color:var(--ink)}
+.sent[hidden]{display:none}
+
+.map{margin-top:20px;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--plum-soft)}
+.map iframe{display:block;width:100%;height:240px;border:0}
+.map-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:12px}
+.map-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;text-decoration-thickness:1px;text-underline-offset:3px}
+
+footer{border-top:1px solid var(--line);padding:40px 0 32px;font-size:.95rem;color:var(--muted)}
+footer .wrap{display:grid;gap:22px}
+@media (min-width:860px){footer .wrap{grid-template-columns:1.4fr 1fr 1fr}}
+footer b{color:var(--ink)}
+footer a{color:var(--ink);display:inline-flex;align-items:center;min-height:44px}
+.foot-links{display:flex;flex-direction:column;align-items:flex-start;margin-top:2px}
+.fine{grid-column:1/-1;font-size:.82rem;border-top:1px solid var(--line);padding-top:18px}
+
+/* sticky call bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surface);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.3fr 1fr;gap:10px;box-shadow:0 -6px 20px rgba(40,20,60,.08);transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
+.bar.show{transform:none;visibility:visible;transition:transform .25s ease,visibility 0s}
+.bar .btn{min-height:52px;width:100%;font-size:1rem;padding:0 12px}
+@media (min-width:860px){.bar{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="note" id="note" role="note">
+  <div class="wrap">
+    <p>Design preview prepared by Northline Studio. Not live. Content taken from your current site.</p>
+    <button type="button" id="noteClose" aria-label="Dismiss preview note">Dismiss</button>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Nellis Family Dentistry, home">
+      <span class="mark-dot" aria-hidden="true">N</span>
+      <span><b>Nellis Family Dentistry</b><small>Tulsa, Oklahoma</small></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#doctor">Dr. Nellis</a>
+      <a href="#visit">Visit</a>
+      <a href="#request">Appointments</a>
+      <a class="btn btn-solid btn-sm head-call" href="tel:+19185186305">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        (918) 518-6305</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Dr. Nicole A. Nellis</p>
+        <h1>Family dentistry in south Tulsa</h1>
+        <p class="tagline">Our patients are family.</p>
+        <p class="lede">Checkups, fillings, implants and whitening for kids and adults, all in one office on S. Delaware Ave. in Tulsa.</p>
+        <div class="cta" id="heroCta">
+          <a class="btn btn-solid" href="tel:+19185186305">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            Call (918) 518-6305</a>
+          <a class="btn btn-line" href="#request">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+            Request appointment</a>
+        </div>
+        <p class="cta-sub">Open Monday to Thursday, 8 am to 5 pm.</p>
+      </div>
+
+      <aside class="card-hours" aria-labelledby="hours-h">
+        <h2 id="hours-h">Office hours</h2>
+        <table class="hours">
+          <caption class="sr">Office hours</caption>
+          <tbody>
+            <tr data-d="1"><th scope="row">Monday</th><td>8 am to 5 pm</td></tr>
+            <tr data-d="2"><th scope="row">Tuesday</th><td>8 am to 5 pm</td></tr>
+            <tr data-d="3"><th scope="row">Wednesday</th><td>8 am to 5 pm</td></tr>
+            <tr data-d="4"><th scope="row">Thursday</th><td>8 am to 5 pm</td></tr>
+            <tr class="other" data-d="5 6 0"><th scope="row">Friday to Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="addr">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <address style="font-style:normal">9314 S. Delaware Ave.<br>Tulsa, OK 74137</address>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What we do</p>
+        <h2 id="svc-h">Care for the whole family, in one office</h2>
+        <p>From a child's first visit to a full set of implants, it all happens at one office.</p>
+      </div>
+      <div class="services">
+        <article class="svc">
+          <div class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.6 3.5 7 3.8 4.6 4.3 3.6 6.8 4 9.3c.4 2.4 1.5 3.8 2 6.3.5 2.4.8 5.4 2.4 5.4 1.8 0 1.6-4.6 3.6-4.6s1.8 4.6 3.6 4.6c1.6 0 1.9-3 2.4-5.4.5-2.5 1.6-3.9 2-6.3.4-2.5-.6-5-3-5.5-1.6-.3-3.5.2-5 1.7z"/></svg></div>
+          <h3>General</h3>
+          <p class="for">Routine care that keeps small problems small.</p>
+          <ul><li>Exams</li><li>Cleanings</li><li>X-rays</li><li>Fillings</li><li>Sealants</li><li>Crowns</li><li>Dentures</li><li>Partials</li></ul>
+        </article>
+        <article class="svc">
+          <div class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"/><path d="M19 15l.8 1.7 1.7.8-1.7.8L19 20l-.8-1.7-1.7-.8 1.7-.8z"/><path d="M5 16l.6 1.2 1.2.6-1.2.6L5 19.6l-.6-1.2-1.2-.6 1.2-.6z"/></svg></div>
+          <h3>Cosmetic</h3>
+          <p class="for">For the smile you'd rather show off.</p>
+          <ul><li>Porcelain veneers</li><li>Teeth whitening</li><li>Zoom whitening</li><li>Bonding</li><li>Invisalign</li></ul>
+        </article>
+        <article class="svc">
+          <div class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 6H8z"/><path d="M10 9v3M14 9v3M9 12h6l-1 9h-4z"/></svg></div>
+          <h3>Restorative</h3>
+          <p class="for">Replacing or rebuilding teeth that are missing or worn.</p>
+          <ul><li>Dental implants</li><li>All-on-4</li><li>Bridges</li><li>Inlays and onlays</li></ul>
+        </article>
+        <article class="svc">
+          <div class="ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 20c0-3 2.2-5.5 5-5.5s5 2.5 5 5.5M13.5 20c0-2.4 1.5-4.4 3.5-4.4s3.5 2 3.5 4.4"/></svg></div>
+          <h3>Kids and gums</h3>
+          <p class="for">Care for children, plus laser treatment for gum problems.</p>
+          <ul><li>Child dentistry</li><li>Laser gum treatment</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="doctor" aria-labelledby="doc-h">
+    <div class="wrap doc">
+      <div class="doc-intro">
+        <div class="sec-head">
+          <p class="eyebrow">Your dentist</p>
+          <h2 id="doc-h">Meet Dr. Nellis</h2>
+        </div>
+        <p class="doc-name">Dr. Nicole A. Nellis</p>
+        <p class="doc-role">General and family dentist, Tulsa</p>
+      </div>
+      <div class="creds">
+        <div>
+          <h3>Education</h3>
+          <ul>
+            <li>University of Oklahoma</li>
+            <li>UT Health Science Center at San Antonio Dental School</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Member of</h3>
+          <ul>
+            <li>American Dental Association</li>
+            <li>Oklahoma Dental Association</li>
+            <li>Tulsa County Dental Society</li>
+            <li>Academy of General Dentistry</li>
+            <li>American Society of Dental Anesthesiologists</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Book a visit</p>
+        <h2 id="visit-h">Getting in to see us</h2>
+        <p>Calling is the quickest way. You can also send a request with the form below.</p>
+      </div>
+      <div class="visit">
+        <div class="panel">
+          <h3>New to the practice?</h3>
+          <p class="small">A simple path to your first appointment.</p>
+          <ol class="steps">
+            <li><div><b>Call or send a request</b><span>(918) 518-6305, Monday to Thursday, 8 am to 5 pm.</span></div></li>
+            <li><div><b>Fill out your forms</b><span>Do it at home so you're not rushing in the waiting room.</span></div></li>
+            <li><div><b>Come see us</b><span>9314 S. Delaware Ave., Tulsa, OK 74137.</span></div></li>
+          </ol>
+          <div class="ph"><a class="btn btn-line btn-sm" href="https://nellisfamilydentistry.com/patient-forms/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>New patient forms</a></div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps?q=9314+S+Delaware+Ave+Tulsa+OK+74137&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing Nellis Family Dentistry at 9314 S. Delaware Ave., Tulsa"></iframe>
+          </div>
+          <div class="map-links">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=9314+S+Delaware+Ave+Tulsa+OK+74137" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>
+              Get directions</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Nellis+Family+Dentistry+Tulsa" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+              Read reviews on Google</a>
+          </div>
+        </div>
+
+        <div class="panel" id="request" tabindex="-1">
+          <h3>Request an appointment</h3>
+          <p class="small">This opens an email to the office with your details filled in. Please don't include medical history here. For anything urgent, call (918) 518-6305.</p>
+          <form id="apptForm" novalidate>
+            <div class="row2">
+              <div>
+                <label for="f-name">Your name <span class="opt">(required)</span></label>
+                <input id="f-name" name="name" autocomplete="name" required aria-required="true">
+              </div>
+              <div>
+                <label for="f-phone">Phone <span class="opt">(required)</span></label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-required="true">
+              </div>
+            </div>
+            <div>
+              <label for="f-time">Preferred time</label>
+              <select id="f-time" name="time">
+                <option>Any time Monday to Thursday</option>
+                <option>Morning (8 am to noon)</option>
+                <option>Afternoon (noon to 5 pm)</option>
+                <option>First appointment available</option>
+              </select>
+            </div>
+            <div>
+              <label for="f-reason">Reason for visit <span class="opt">(optional)</span></label>
+              <select id="f-reason" name="reason">
+                <option value="">Choose one</option>
+                <option>Checkup and cleaning</option>
+                <option>New patient visit</option>
+                <option>Child's appointment</option>
+                <option>Tooth pain or broken tooth</option>
+                <option>Cosmetic (whitening, veneers, Invisalign)</option>
+                <option>Implants, crowns or dentures</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div>
+              <label for="f-note">Anything else? <span class="opt">(optional)</span></label>
+              <textarea id="f-note" name="note" rows="3"></textarea>
+            </div>
+            <p class="err" id="err" role="alert"></p>
+            <button class="btn btn-solid" type="submit">Send request</button>
+            <p class="sent" id="sent" role="status" hidden>If your email app didn't open, email <a href="mailto:info@nellisfamilydentistry.com">info@nellisfamilydentistry.com</a> or call <a href="tel:+19185186305">(918) 518-6305</a>.</p>
+            <p class="form-foot">Opens your email app with your request ready to send to info@nellisfamilydentistry.com. This is a request, not a confirmed appointment.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b style="font:600 1.2rem/1.2 var(--serif)">Nellis Family Dentistry</b>
+      <p style="margin-top:6px">Dr. Nicole A. Nellis<br>9314 S. Delaware Ave., Tulsa, OK 74137</p>
+    </div>
+    <div>
+      <b>Contact</b>
+      <div class="foot-links"><a href="tel:+19185186305">(918) 518-6305</a><a href="mailto:info@nellisfamilydentistry.com">info@nellisfamilydentistry.com</a></div>
+    </div>
+    <div>
+      <b>Hours</b>
+      <p style="margin-top:6px">Mon to Thu, 8 am to 5 pm<br>Closed Friday to Sunday</p>
+    </div>
+    <p class="fine">Design preview by Northline Studio. Not the official Nellis Family Dentistry website. Practice details are taken from the current public site.</p>
+  </div>
+</footer>
+
+<div class="bar" id="bar" role="region" aria-label="Quick contact">
+  <a class="btn btn-solid" href="tel:+19185186305">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+    Call now</a>
+  <a class="btn btn-line" href="#request">Request</a>
+</div>
+
+<script>
+(function(){
+  var note=document.getElementById('note');
+  try{if(sessionStorage.getItem('nfd-note')==='1')note.hidden=true}catch(e){}
+  document.getElementById('noteClose').addEventListener('click',function(){
+    note.hidden=true;try{sessionStorage.setItem('nfd-note','1')}catch(e){}
+  });
+
+  // Highlight today's hours row (Tulsa local time)
+  try{
+    var wd=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short'}).format(new Date());
+    var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(wd);
+    var row=document.querySelector('.hours tr[data-d~="'+d+'"]');
+    if(row){row.classList.add('today');row.querySelector('th').insertAdjacentHTML('beforeend',' <span class="pill">Today</span>');}
+  }catch(e){}
+
+  // Sticky bar: show once the hero buttons leave the viewport
+  var bar=document.getElementById('bar'),cta=document.getElementById('heroCta');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){
+      var gone=!en[0].isIntersecting&&en[0].boundingClientRect.top<0;
+      bar.classList.toggle('show',gone);
+    }).observe(cta);
+  }else{bar.classList.add('show')}
+
+  var f=document.getElementById('apptForm'),err=document.getElementById('err'),sent=document.getElementById('sent');
+  function mark(input,bad){
+    if(bad){input.setAttribute('aria-invalid','true');input.setAttribute('aria-describedby','err')}
+    else{input.removeAttribute('aria-invalid');input.removeAttribute('aria-describedby')}
+  }
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var el=f.elements,n=el.name.value.trim(),ph=el.phone.value.trim(),nt=el.note.value.trim();
+    mark(el.name,!n);mark(el.phone,!ph);
+    if(!n||!ph){
+      sent.hidden=true;
+      err.textContent=(!n&&!ph)?'Please add your name and a phone number so the office can call you back.':(!n?'Please add your name.':'Please add a phone number so the office can call you back.');
+      (n?el.phone:el.name).focus();return;
+    }
+    err.textContent='';
+    var body='Name: '+n+'\nPhone: '+ph+'\nPreferred time: '+el.time.value+(el.reason.value?'\nReason: '+el.reason.value:'')+(nt?'\nNotes: '+nt:'')+'\n\nSent from the appointment request form.';
+    location.href='mailto:info@nellisfamilydentistry.com?subject='+encodeURIComponent('Appointment request: '+n)+'&body='+encodeURIComponent(body);
+    sent.hidden=false;
+  });
+})();
+</script>
+</body>
+</html>
