@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo Karahi House</title>
+<meta name="description" content="Demo restaurant website for a fictional karahi house. Demo site by Northline Studio.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf3e4;--bg2:#f3e5c8;--ink:#2a1810;--mute:#6b5445;--chili:#c4310f;--saffron:#e9a21b;--card:#fffaf0;--line:#e0cfae;--onchili:#fff;
+  --disp:"Fraunces",Georgia,serif;--body:"Hanken Grotesk",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#1a100b;--bg2:#241711;--ink:#f6e8d0;--mute:#b99f88;--chili:#ff6a3d;--saffron:#f2b33a;--card:#2a1b14;--line:#44301f;--onchili:#1a100b}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--bg);padding:.6rem 1rem;z-index:99}
+.skip:focus{left:0}
+.demo{background:var(--ink);color:var(--bg);text-align:center;font-size:.8rem;padding:.45rem 1rem}
+.wrap{width:min(1080px,100% - 2rem);margin-inline:auto}
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+.logo{font:800 1.2rem var(--disp);text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--chili)}
+nav ul{display:none;list-style:none;margin:0;padding:0;gap:1.4rem}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{color:var(--chili)}
+@media(min-width:720px){nav ul{display:flex}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--chili);color:var(--onchili);font-weight:700;text-decoration:none;padding:.8rem 1.3rem;border-radius:999px;border:0;cursor:pointer;font-size:1rem;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn.sm{padding:.5rem .95rem;font-size:.9rem}
+.hero{position:relative;overflow:hidden;padding:3.5rem 0 4rem;background:
+ radial-gradient(circle at 85% 20%,color-mix(in srgb,var(--saffron) 40%,transparent),transparent 45%),var(--bg2)}
+.hero h1{font:800 clamp(2.6rem,10vw,5.5rem)/.95 var(--disp);margin:.4rem 0 1rem;letter-spacing:-.03em;max-width:12ch}
+.hero h1 em{color:var(--chili);font-style:normal}
+.hero p{max-width:46ch;color:var(--mute);font-size:1.1rem}
+.eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--chili)}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.pot{position:absolute;right:-60px;bottom:-80px;width:min(380px,70vw);opacity:.9;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+section{padding:3.5rem 0}
+h2{font:800 clamp(1.9rem,6vw,2.8rem)/1.05 var(--disp);margin:.3rem 0 1.6rem;letter-spacing:-.02em}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.tabs button{font:600 .95rem var(--body);padding:.5rem 1rem;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.menu{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.35rem}
+.dish[hidden]{display:none}
+.dish h3{font:700 1.15rem var(--disp);margin:0;display:flex;justify-content:space-between;gap:.8rem}
+.dish .price{color:var(--chili);font-family:var(--body);white-space:nowrap}
+.dish p{margin:0;color:var(--mute);font-size:.93rem;flex:1}
+.dish .btn{align-self:flex-start;margin-top:.5rem}
+.heat{font-size:.78rem;font-weight:700;color:var(--saffron);letter-spacing:.05em}
+.note{color:var(--mute);font-size:.88rem;margin-top:1.2rem}
+.band{background:var(--ink);color:var(--bg)}
+.band h2{color:var(--bg)}
+.hours{display:grid;gap:2rem}
+@media(min-width:760px){.hours{grid-template-columns:1fr 1fr}}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:.65rem 0;border-bottom:1px solid color-mix(in srgb,var(--bg) 22%,transparent)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.band a{color:var(--saffron)}
+address{font-style:normal;line-height:1.8}
+.map{margin-top:1rem;border-radius:16px;background:
+ repeating-linear-gradient(45deg,transparent 0 22px,color-mix(in srgb,var(--bg) 8%,transparent) 22px 23px),color-mix(in srgb,var(--bg) 12%,var(--ink));
+ min-height:170px;display:grid;place-items:center;text-align:center;padding:1rem;font-size:.9rem;border:1px dashed color-mix(in srgb,var(--bg) 40%,transparent)}
+footer{padding:2rem 0 5.5rem;color:var(--mute);font-size:.88rem;text-align:center}
+.fab{position:fixed;right:1rem;bottom:1rem;z-index:20;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.badge{display:inline-block;background:var(--saffron);color:#2a1810;font-weight:700;font-size:.75rem;padding:.15rem .55rem;border-radius:999px}
+</style>
+</head>
+<body>
+<a class="skip" href="#menu">Skip to menu</a>
+<div class="demo" role="note">Demo site by Northline Studio - not a real business</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Demo <span>Karahi</span> House</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#menu">Menu</a></li><li><a href="#visit">Hours</a></li><li><a href="#location">Find us</a></li>
+    </ul></nav>
+    <a class="btn sm" href="https://wa.me/000000000000?text=Hello%20Demo%20Karahi%20House%2C%20I%20would%20like%20to%20order" target="_blank" rel="noopener">Order on WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <svg class="pot" viewBox="0 0 400 300" aria-hidden="true">
+    <path d="M30 120h340c0 90-60 160-170 160S30 210 30 120z" fill="#2a1810" stroke="#e9a21b" stroke-width="6"/>
+    <path d="M10 112h380" stroke="#e9a21b" stroke-width="12" stroke-linecap="round"/>
+    <path d="M70 60c-14-24 14-34 0-60M200 70c-14-24 14-34 0-60M330 60c-14-24 14-34 0-60" stroke="#c4310f" stroke-width="7" fill="none" stroke-linecap="round"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow">Wok-fired &middot; Slow-simmered &middot; Fresh daily</span>
+    <h1>Karahi, the <em>loud</em> way.</h1>
+    <p>Tomatoes, ginger, green chilli and flame. Every karahi is cooked to order in the pot it is served in. Fictional food, very real appetite.</p>
+    <div class="cta">
+      <a class="btn" href="https://wa.me/000000000000?text=Hello%20Demo%20Karahi%20House%2C%20I%20would%20like%20to%20order" target="_blank" rel="noopener">Order on WhatsApp</a>
+      <a class="btn alt" href="#menu">See the menu</a>
+    </div>
+  </div>
+</div>
+
+<section id="menu" aria-labelledby="mh">
+  <div class="wrap">
+    <span class="eyebrow">What's cooking</span>
+    <h2 id="mh">The Menu</h2>
+    <div class="tabs" role="group" aria-label="Filter menu">
+      <button aria-pressed="true" data-f="all">All</button>
+      <button aria-pressed="false" data-f="karahi">Karahi</button>
+      <button aria-pressed="false" data-f="grill">Grill</button>
+      <button aria-pressed="false" data-f="sides">Breads &amp; Sides</button>
+      <button aria-pressed="false" data-f="drinks">Drinks</button>
+    </div>
+    <div class="menu" id="items"></div>
+    <p class="note">Sample menu and prices for demonstration only. Prices in demo currency units.</p>
+  </div>
+</section>
+
+<section class="band" id="visit" aria-labelledby="vh">
+  <div class="wrap hours">
+    <div>
+      <span class="eyebrow" style="color:var(--saffron)">Come hungry</span>
+      <h2 id="vh">Opening Hours</h2>
+      <table>
+        <caption class="sr" style="position:absolute;left:-999px">Opening hours</caption>
+        <tbody>
+          <tr><th scope="row">Mon - Thu</th><td>12:00 - 23:00</td></tr>
+          <tr><th scope="row">Fri - Sat</th><td>12:00 - 01:00</td></tr>
+          <tr><th scope="row">Sunday</th><td>13:00 - 23:00</td></tr>
+        </tbody>
+      </table>
+      <p id="status" aria-live="polite"></p>
+    </div>
+    <div id="location">
+      <span class="eyebrow" style="color:var(--saffron)">Find us</span>
+      <h2>Location</h2>
+      <address>
+        Demo Karahi House<br>
+        00 Placeholder Street, Sample Town<br>
+        Phone: <a href="tel:+000000000000">+00 000 0000000</a>
+      </address>
+      <div class="map" role="img" aria-label="Map placeholder">Map placeholder<br>(embed a real map here)</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Demo Karahi House is a fictional restaurant. Demo site by Northline Studio - not a real business.</div></footer>
+
+<a class="btn fab" href="https://wa.me/000000000000?text=Hello%20Demo%20Karahi%20House%2C%20I%20would%20like%20to%20order" target="_blank" rel="noopener" aria-label="Order on WhatsApp">Order on WhatsApp</a>
+
+<script>
+var D=[
+["karahi","Chicken Karahi","Bone-in chicken, tomato, ginger, green chilli, finished with fresh coriander.","1200","HEAT 2/3"],
+["karahi","Mutton Karahi","Slow-cooked until tender in a rich tomato and black pepper masala.","2400","HEAT 2/3"],
+["karahi","Paneer Karahi","Cottage cheese, capsicum and onion tossed over high flame.","1100","HEAT 1/3"],
+["karahi","Fire Karahi","Our hottest. Whole red chillies and a ginger-garlic crust.","1400","HEAT 3/3"],
+["grill","Seekh Kebab (4)","Minced beef skewers with herbs, charred over coal.","700","HEAT 2/3"],
+["grill","Chicken Tikka","Yoghurt and spice marinade, grilled to a smoky finish.","650","HEAT 1/3"],
+["grill","Malai Boti","Creamy, mild, melt-in-the-mouth chicken pieces.","750","HEAT 0/3"],
+["sides","Tandoori Naan","Fresh from the clay oven.","80","FRESH"],
+["sides","Garlic Naan","Buttered with roasted garlic and parsley.","120","FRESH"],
+["sides","Kachumber Salad","Cucumber, tomato, onion, lemon and mint.","150","FRESH"],
+["sides","Mint Raita","Cool yoghurt with cumin and mint.","130","FRESH"],
+["drinks","Sweet Lassi","Thick, chilled and lightly salted or sweet.","220","COLD"],
+["drinks","Mint Margarita","Fresh mint, lime and soda. No alcohol.","240","COLD"],
+["drinks","Kashmiri Chai","Pink tea with crushed pistachio.","200","HOT"]
+];
+var box=document.getElementById("items"),wa="https://wa.me/000000000000?text=";
+D.forEach(function(d){
+  var a=document.createElement("article");a.className="dish";a.dataset.c=d[0];
+  a.innerHTML='<h3>'+d[1]+'<span class="price">'+d[3]+'</span></h3><span class="heat">'+d[4]+'</span><p>'+d[2]+'</p>'+
+  '<a class="btn sm" target="_blank" rel="noopener" href="'+wa+encodeURIComponent("Hello Demo Karahi House, I would like to order: "+d[1])+'">Order this</a>';
+  box.appendChild(a);
+});
+document.querySelectorAll(".tabs button").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll(".tabs button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+    var f=b.dataset.f;
+    box.querySelectorAll(".dish").forEach(function(c){c.hidden=!(f==="all"||c.dataset.c===f)});
+  });
+});
+(function(){
+  var n=new Date(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,open;
+  if(d===0)open=h>=13&&h<23;else if(d===5||d===6)open=h>=12||h<1;else open=h>=12&&h<23;
+  document.getElementById("status").innerHTML='<span class="badge">'+(open?"Open now":"Closed now")+'</span>';
+})();
+</script>
+</body>
+</html>

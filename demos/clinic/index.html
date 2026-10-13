@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo Family Clinic</title>
+<meta name="description" content="Demo clinic website for a fictional family clinic. Demo site by Northline Studio.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f9f6;--surface:#fff;--ink:#12302b;--mute:#4f6b64;--teal:#0f766e;--teal2:#cdeee6;--coral:#e8745a;--line:#d3e5de;--onteal:#fff;
+  --disp:"DM Serif Display",Georgia,serif;--body:"Figtree",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0c1a18;--surface:#13251f;--ink:#e3f3ee;--mute:#92b2a9;--teal:#4fd1be;--teal2:#16342e;--coral:#ff8d73;--line:#25423a;--onteal:#08201b}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body)}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--bg);padding:.6rem 1rem;z-index:99}
+.skip:focus{left:0}
+.demo{background:var(--coral);color:#1b0d08;text-align:center;font-size:.8rem;font-weight:500;padding:.45rem 1rem}
+.wrap{width:min(1040px,100% - 2rem);margin-inline:auto}
+header.nav{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:.75rem 0;gap:1rem}
+.logo{display:flex;align-items:center;gap:.55rem;font:400 1.25rem var(--disp);text-decoration:none;color:var(--ink)}
+.logo i{width:30px;height:30px;border-radius:9px;background:var(--teal);display:grid;place-items:center;color:var(--onteal);font-style:normal;font-family:var(--body);font-weight:700}
+nav ul{display:none;gap:1.4rem;list-style:none;margin:0;padding:0}
+nav a{color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--teal)}
+@media(min-width:760px){nav ul{display:flex}}
+.btn{display:inline-block;background:var(--teal);color:var(--onteal);font:700 1rem var(--body);padding:.8rem 1.4rem;border-radius:12px;border:0;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.sm{padding:.5rem 1rem;font-size:.92rem}
+.hero{padding:3rem 0 3.5rem;display:grid;gap:2rem;align-items:center}
+@media(min-width:800px){.hero{grid-template-columns:1.2fr 1fr}}
+.hero h1{font:400 clamp(2.4rem,8vw,4.2rem)/1.05 var(--disp);margin:.5rem 0 1rem}
+.hero h1 em{color:var(--teal);font-style:italic}
+.hero p{color:var(--mute);font-size:1.1rem;max-width:44ch}
+.pill{display:inline-block;background:var(--teal2);color:var(--teal);font-weight:700;font-size:.8rem;padding:.3rem .8rem;border-radius:999px}
+.quick{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.4rem;display:grid;gap:.9rem}
+.quick h2{font:400 1.4rem var(--disp);margin:0}
+.quick div{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:.55rem;gap:1rem}
+.quick div:last-of-type{border:0}
+.badge{display:inline-block;padding:.1rem .6rem;border-radius:999px;font-size:.78rem;font-weight:700}
+.badge.o{background:var(--teal2);color:var(--teal)}.badge.c{background:color-mix(in srgb,var(--coral) 25%,transparent);color:var(--coral)}
+section{padding:3rem 0}
+section.alt{background:var(--surface);border-block:1px solid var(--line)}
+h2.t{font:400 clamp(1.8rem,5vw,2.6rem)/1.1 var(--disp);margin:.4rem 0 1.5rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:1.3rem}
+.alt .card{background:var(--bg)}
+.card h3{margin:.7rem 0 .3rem;font-size:1.1rem}
+.card p{margin:0;color:var(--mute);font-size:.95rem}
+.ic{width:44px;height:44px;border-radius:13px;background:var(--teal2);color:var(--teal);display:grid;place-items:center}
+.ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.doc{display:flex;gap:1rem;align-items:center}
+.av{flex:none;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--coral));display:grid;place-items:center;color:#fff;font:400 1.5rem var(--disp)}
+.doc h3{margin:0}.doc small{color:var(--teal);font-weight:700}
+.two{display:grid;gap:2rem}
+@media(min-width:800px){.two{grid-template-columns:1.2fr 1fr}}
+form{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.4rem;display:grid;gap:1rem}
+.row{display:grid;gap:1rem}
+@media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:.3rem;font-weight:700;font-size:.92rem}
+input,select,textarea{font:400 1rem var(--body);padding:.7rem .8rem;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--coral);outline-offset:1px;border-color:transparent}
+.hint{color:var(--mute);font-size:.85rem;font-weight:400}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:.65rem 0;border-bottom:1px solid var(--line)}
+td{text-align:right;font-variant-numeric:tabular-nums}
+.warn{background:color-mix(in srgb,var(--coral) 18%,transparent);border-radius:14px;padding:.9rem 1rem;margin-top:1rem;font-size:.92rem}
+footer{padding:2rem 0;text-align:center;color:var(--mute);font-size:.88rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo" role="note">Demo site by Northline Studio - not a real business</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><i aria-hidden="true">+</i>Demo Family Clinic</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#services">Services</a></li><li><a href="#doctors">Doctors</a></li><li><a href="#hours">Hours</a></li>
+    </ul></nav>
+    <a class="btn sm" href="#book">Request appointment</a>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap hero" id="top">
+  <div>
+    <span class="pill">Care for every age</span>
+    <h1>Gentle care for <em>the whole family</em>.</h1>
+    <p>From newborn checkups to senior wellness, our fictional team keeps things calm, clear and close to home. Request a visit in under a minute.</p>
+    <p><a class="btn" href="#book">Request an appointment</a></p>
+  </div>
+  <aside class="quick" aria-label="Clinic at a glance">
+    <h2>At a glance</h2>
+    <div><span>Status</span><span id="status" class="badge o">-</span></div>
+    <div><span>Phone</span><a href="tel:+000000000000">+00 000 0000000</a></div>
+    <div><span>Address</span><span>00 Placeholder Rd, Sample Town</span></div>
+    <div><span>Walk-ins</span><span>Weekday mornings</span></div>
+  </aside>
+</div>
+
+<section class="alt" id="services" aria-labelledby="sh"><div class="wrap">
+  <h2 class="t" id="sh">Services</h2>
+  <div class="grid">
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.500-9 9-9 9z"/></svg></div><h3>General checkups</h3><p>Routine exams, blood pressure and wellness screening.</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3>Child health</h3><p>Growth monitoring, vaccinations and fever care.</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg></div><h3>Minor procedures</h3><p>Dressings, stitches and small in-clinic treatments.</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3>Chronic care</h3><p>Ongoing support for diabetes and blood pressure.</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><h3>Lab &amp; reports</h3><p>Basic tests with clear, printed results.</p></div>
+    <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10z"/></svg></div><h3>Women's health</h3><p>Prenatal visits and general consultations.</p></div>
+  </div>
+</div></section>
+
+<section id="doctors" aria-labelledby="dh"><div class="wrap">
+  <h2 class="t" id="dh">Our doctors</h2>
+  <p class="hint" style="margin-top:-1rem">Fictional placeholder profiles, not real people.</p>
+  <div class="grid">
+    <div class="card doc"><div class="av" aria-hidden="true">A</div><div><h3>Dr. A. Placeholder</h3><small>Family Medicine</small><p>Mon, Wed, Fri</p></div></div>
+    <div class="card doc"><div class="av" aria-hidden="true">B</div><div><h3>Dr. B. Example</h3><small>Pediatrics</small><p>Tue, Thu, Sat</p></div></div>
+    <div class="card doc"><div class="av" aria-hidden="true">C</div><div><h3>Dr. C. Sample</h3><small>Internal Medicine</small><p>Mon - Thu</p></div></div>
+  </div>
+</div></section>
+
+<section class="alt" id="book" aria-labelledby="bh"><div class="wrap two">
+  <div>
+    <h2 class="t" id="bh">Request an appointment</h2>
+    <form id="f" novalidate>
+      <div class="row">
+        <label>Full name<input name="name" required autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" required autocomplete="tel" placeholder="+00 000 0000000"></label>
+      </div>
+      <div class="row">
+        <label>Service<select name="service"><option>General checkup</option><option>Child health</option><option>Minor procedure</option><option>Chronic care</option><option>Lab &amp; reports</option><option>Women's health</option></select></label>
+        <label>Preferred date<input name="date" type="date" required></label>
+      </div>
+      <label>Notes <span class="hint">(optional)</span><textarea name="notes" rows="3"></textarea></label>
+      <p id="err" role="alert" class="hint" style="color:var(--coral);margin:0"></p>
+      <button class="btn" type="submit">Send request by email</button>
+      <p class="hint" style="margin:0">This opens your email app with the details filled in. Demo address only.</p>
+    </form>
+  </div>
+  <div id="hours">
+    <h2 class="t">Opening hours</h2>
+    <table>
+      <tbody>
+        <tr><th scope="row">Mon - Fri</th><td>09:00 - 20:00</td></tr>
+        <tr><th scope="row">Saturday</th><td>10:00 - 16:00</td></tr>
+        <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+      </tbody>
+    </table>
+    <div class="warn"><strong>Emergency?</strong> This is a demo clinic. In a real emergency contact your local emergency services.</div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Demo Family Clinic is fictional. Demo site by Northline Studio - not a real business.</div></footer>
+
+<script>
+(function(){
+  var n=new Date(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,o=false;
+  if(d>=1&&d<=5)o=h>=9&&h<20;else if(d===6)o=h>=10&&h<16;
+  var s=document.getElementById("status");s.textContent=o?"Open now":"Closed now";s.className="badge "+(o?"o":"c");
+  var dt=document.querySelector("[name=date]");dt.min=new Date().toISOString().slice(0,10);
+})();
+document.getElementById("f").addEventListener("submit",function(e){
+  e.preventDefault();
+  var f=e.target,v=function(k){return f.elements[k].value.trim()},err=document.getElementById("err");
+  if(!v("name")||!v("phone")||!v("date")){err.textContent="Please fill in name, phone and preferred date.";return}
+  err.textContent="";
+  var body="Name: "+v("name")+"\nPhone: "+v("phone")+"\nService: "+v("service")+"\nPreferred date: "+v("date")+"\nNotes: "+v("notes");
+  location.href="mailto:appointments@example.invalid?subject="+encodeURIComponent("Appointment request - "+v("name"))+"&body="+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>

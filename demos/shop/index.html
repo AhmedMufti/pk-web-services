@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo Fashion Store</title>
+<meta name="description" content="Demo fashion store website, fictional. Demo site by Northline Studio.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Unbounded:wght@500;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f0ea;--ink:#111;--mute:#5c5a54;--acc:#d7ff3a;--accink:#111;--card:#fff;--line:#111;
+  --disp:"Unbounded",system-ui,sans-serif;--body:"Space Grotesk",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0e0e0d;--ink:#f2f0ea;--mute:#a09d94;--card:#191918;--line:#f2f0ea}
+}
+*{box-sizing:border-box}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.5 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 6px var(--acc)}
+.skip{position:absolute;left:-999px;top:0;background:var(--acc);color:#111;padding:.6rem 1rem;z-index:99}
+.skip:focus{left:0}
+.demo{background:var(--acc);color:#111;text-align:center;font-size:.8rem;font-weight:700;padding:.45rem 1rem;border-bottom:2px solid #111}
+.wrap{width:min(1200px,100% - 2rem);margin-inline:auto}
+header{border-bottom:2px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:.9rem 0;gap:1rem}
+.logo{font:800 1.05rem var(--disp);text-decoration:none;text-transform:uppercase;letter-spacing:-.02em}
+.logo b{background:var(--acc);color:#111;padding:0 .3rem}
+.hero{padding:2.5rem 0 1.5rem;border-bottom:2px solid var(--line);overflow:hidden}
+.hero h1{font:800 clamp(2.6rem,13vw,8.5rem)/.9 var(--disp);margin:0;text-transform:uppercase;letter-spacing:-.05em}
+.hero h1 span{display:inline-block;background:var(--acc);color:#111;padding:0 .12em;transform:rotate(-2deg)}
+.hero p{max-width:48ch;color:var(--mute);font-size:1.1rem;margin:1.2rem 0}
+.marq{background:var(--ink);color:var(--bg);font:500 .85rem var(--disp);text-transform:uppercase;overflow:hidden;white-space:nowrap;padding:.6rem 0}
+.marq div{display:inline-block;padding-left:100%;animation:m 22s linear infinite}
+@keyframes m{to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.marq div{animation:none;padding-left:1rem}}
+.bar{display:flex;flex-wrap:wrap;gap:.5rem;padding:1.5rem 0;align-items:center}
+.bar h2{font:800 1.4rem var(--disp);margin:0 auto 0 0;text-transform:uppercase}
+.chip{font:500 .9rem var(--body);padding:.45rem .95rem;border:2px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--acc);color:#111;border-color:#111;font-weight:700}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr);padding-bottom:3rem}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr);gap:1.4rem}}
+@media(min-width:1040px){.grid{grid-template-columns:repeat(4,1fr)}}
+.p{background:var(--card);border:2px solid var(--line);display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.p:hover{transform:translate(-4px,-4px);box-shadow:6px 6px 0 var(--line)}
+.p[hidden]{display:none}
+.img{aspect-ratio:4/5;display:grid;place-items:center;border-bottom:2px solid var(--line);position:relative}
+.img svg{width:55%;height:55%}
+.tag{position:absolute;top:.5rem;left:.5rem;background:#111;color:#fff;font-size:.7rem;font-weight:700;padding:.1rem .5rem;text-transform:uppercase}
+.info{padding:.8rem;display:flex;flex-direction:column;gap:.2rem;flex:1}
+.info h3{margin:0;font-size:1rem;font-weight:700}
+.info small{color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
+.price{font:500 1rem var(--disp);margin-top:.2rem}
+.wa{margin-top:.7rem;display:block;text-align:center;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700;padding:.65rem .5rem;font-size:.9rem}
+.wa:hover{background:var(--acc);color:#111}
+.count{color:var(--mute);font-size:.9rem}
+.how{border-top:2px solid var(--line);padding:2.5rem 0;display:grid;gap:1.2rem}
+@media(min-width:760px){.how{grid-template-columns:repeat(3,1fr)}}
+.how div{border:2px solid var(--line);padding:1.1rem}
+.how b{font:800 2rem var(--disp);color:var(--ink);display:block;-webkit-text-stroke:0}
+.how b span{background:var(--acc);color:#111;padding:0 .3rem}
+footer{border-top:2px solid var(--line);padding:1.8rem 0;color:var(--mute);font-size:.9rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#shop">Skip to products</a>
+<div class="demo" role="note">Demo site by Northline Studio - not a real business</div>
+<header><div class="wrap">
+  <a class="logo" href="#"><b>Demo</b> Fashion Store</a>
+  <span class="count">Tel: +00 000 0000000</span>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <h1>Wear it <span>loud.</span><br>Own the day.</h1>
+  <p>A fictional streetwear and everyday-basics drop. Pick what you like, tap order and finish the chat on WhatsApp. No cart, no checkout maze.</p>
+</div></section>
+<div class="marq" aria-hidden="true"><div>New drop &middot; Free fitting chat &middot; Order on WhatsApp &middot; Easy exchanges &middot; New drop &middot; Free fitting chat &middot; Order on WhatsApp &middot; Easy exchanges &middot;</div></div>
+
+<div class="wrap" id="shop">
+  <div class="bar">
+    <h2>Shop</h2>
+    <div role="group" aria-label="Filter by category" id="chips" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
+  </div>
+  <p class="count" aria-live="polite" id="count"></p>
+  <div class="grid" id="grid"></div>
+
+  <div class="how">
+    <div><b><span>01</span></b>Pick your piece and size notes.</div>
+    <div><b><span>02</span></b>Tap "Order on WhatsApp" for a pre-filled message.</div>
+    <div><b><span>03</span></b>Confirm details and delivery in chat.</div>
+  </div>
+</div>
+</main>
+<footer><div class="wrap">Demo Fashion Store is fictional. Demo site by Northline Studio - not a real business. Illustrations are generic shapes, not real products.</div></footer>
+
+<script>
+var cats=["All","Tops","Bottoms","Outerwear","Accessories"];
+var P=[
+["Tops","Boxy Tee","Heavyweight cotton, drop shoulder",1800,"#d7ff3a","tee","New"],
+["Tops","Stripe Longsleeve","Soft rib, relaxed fit",2400,"#ff7a59","tee",""],
+["Tops","Oversized Shirt","Crisp poplin, wide cut",3200,"#7ab8ff","tee",""],
+["Bottoms","Cargo Pants","Six pockets, tapered leg",4200,"#c9b98a","pant","New"],
+["Bottoms","Wide Denim","Rigid denim, high rise",4800,"#4a6fa5","pant",""],
+["Bottoms","Lounge Shorts","Brushed fleece",2000,"#b69cff","pant",""],
+["Outerwear","Coach Jacket","Water-resistant shell",6500,"#222222","jacket","New"],
+["Outerwear","Quilted Vest","Light padding, snap front",5200,"#ff9f1c","jacket",""],
+["Outerwear","Zip Hoodie","Heavy fleece, kangaroo pocket",4600,"#8fd694","jacket",""],
+["Accessories","Bucket Hat","Washed twill",1200,"#ff7a59","hat",""],
+["Accessories","Canvas Tote","Roomy, inner pocket",1500,"#d7ff3a","bag","New"],
+["Accessories","Crossbody Bag","Adjustable strap",2600,"#222222","bag",""]
+];
+var S={
+tee:'<path d="M20 25 40 12h20l20 13 12 22-16 8-6-10v52H30V57l-6 10-16-8z"/>',
+pant:'<path d="M28 10h44l6 85H55L50 40l-5 55H22z"/>',
+jacket:'<path d="M18 25 38 10h24l20 15 10 50-14 3-3-20v35H25V73l-3 20-14-3z"/><path d="M50 10v85" stroke="#111" stroke-width="2" fill="none"/>',
+hat:'<path d="M25 60c0-25 12-38 25-38s25 13 25 38zM15 62h70v8H15z"/>',
+bag:'<path d="M20 38h60l6 52H14z"/><path d="M35 38c0-22 30-22 30 0" stroke="#111" stroke-width="4" fill="none"/>'
+};
+var chips=document.getElementById("chips"),grid=document.getElementById("grid"),count=document.getElementById("count");
+cats.forEach(function(c,i){
+  var b=document.createElement("button");b.className="chip";b.textContent=c;b.setAttribute("aria-pressed",i===0);
+  b.onclick=function(){
+    chips.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+    var n=0;grid.querySelectorAll(".p").forEach(function(p){var s=c==="All"||p.dataset.c===c;p.hidden=!s;if(s)n++});
+    count.textContent=n+" item"+(n===1?"":"s")+" shown";
+  };
+  chips.appendChild(b);
+});
+P.forEach(function(p){
+  var a=document.createElement("article");a.className="p";a.dataset.c=p[0];
+  var msg="Hello Demo Fashion Store, I would like to order: "+p[1]+" (price "+p[3]+")";
+  a.innerHTML='<div class="img" style="background:'+p[4]+'">'+(p[6]?'<span class="tag">'+p[6]+'</span>':'')+
+  '<svg viewBox="0 0 100 100" aria-hidden="true" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round">'+S[p[5]]+'</svg></div>'+
+  '<div class="info"><small>'+p[0]+'</small><h3>'+p[1]+'</h3><span class="count">'+p[2]+'</span><span class="price">'+p[3].toLocaleString("en-US")+' <small>demo units</small></span>'+
+  '<a class="wa" target="_blank" rel="noopener" aria-label="Order '+p[1]+' on WhatsApp" href="https://wa.me/000000000000?text='+encodeURIComponent(msg)+'">Order on WhatsApp</a></div>';
+  grid.appendChild(a);
+});
+count.textContent=P.length+" items shown";
+</script>
+</body>
+</html>
