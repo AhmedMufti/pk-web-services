@@ -16,7 +16,7 @@ p.l{color:var(--mut);font-size:18px;max-width:620px}
 section{padding:32px 0}h2{font-size:24px;margin:0 0 16px}
 .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .c{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:20px}
-.c h3{margin:0 0 6px}.pr{color:var(--acc);font-weight:700;font-size:20px}.c ul{padding-left:18px;color:var(--mut);margin:8px 0 0}
+.c h3{margin:0 0 6px}.pr{color:var(--acc);font-weight:700;font-size:20px}.card{display:block;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--acc)}.go{display:inline-block;margin-top:12px;color:var(--acc);font-weight:600}.c ul{padding-left:18px;color:var(--mut);margin:8px 0 0}
 footer{padding:40px 0;color:var(--mut);border-top:1px solid var(--bd);margin-top:32px}
 </style>
 </head>
@@ -44,9 +44,9 @@ footer{padding:40px 0;color:var(--mut);border-top:1px solid var(--bd);margin-top
 <h2>Sample work</h2>
 <p style="color:var(--mut)">Demo sites built to show the style. They are not real businesses.</p>
 <div class="g">
-<a class="c" href="demos/restaurant/" style="text-decoration:none;color:inherit"><h3>Restaurant</h3><p style="color:var(--mut);margin:0">Menu, hours, WhatsApp ordering.</p></a>
-<a class="c" href="demos/clinic/" style="text-decoration:none;color:inherit"><h3>Clinic</h3><p style="color:var(--mut);margin:0">Services, doctors, appointment requests.</p></a>
-<a class="c" href="demos/shop/" style="text-decoration:none;color:inherit"><h3>Retail shop</h3><p style="color:var(--mut);margin:0">Product grid, filters, order on WhatsApp.</p></a>
+<a class="c card" href="demos/restaurant/"><h3>Restaurant</h3><p style="color:var(--mut);margin:0">Menu, hours, WhatsApp ordering.</p><span class="go">View demo &rarr;</span></a>
+<a class="c card" href="demos/clinic/"><h3>Clinic</h3><p style="color:var(--mut);margin:0">Services, doctors, appointment requests.</p><span class="go">View demo &rarr;</span></a>
+<a class="c card" href="demos/shop/"><h3>Retail shop</h3><p style="color:var(--mut);margin:0">Product grid, filters, order on WhatsApp.</p><span class="go">View demo &rarr;</span></a>
 </div>
 </section>
 
